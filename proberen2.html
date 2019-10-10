@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <style>
-    input {
+    .bewegendplaatje {
         height: 100px;
         width: 100px;
+        border-radius: 50%;
         position: relative;
         -webkit-animation: myfirst 5s 2; /* Safari 4.0 - 8.0 */
         -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
-        animation: myfirst 5s 2;
+        animation: myfirst 5s 2, blink 1s infinite;
         animation-direction: alternate;
     }
 
@@ -27,6 +28,21 @@
   75%  {background: green; left: 0px; top: 200px;}
   100% {background: red; left: 0px; top: 0px;}
 }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+    
+
 
     </style>
     <script>
@@ -52,8 +68,9 @@
     <br>
     <br>
     <br>
+    <div class="bewegendplaatje">
+        <input type="image" src="matrix.jpg" height="100px" width="100px" id="afbeelding" />
+    </div>
 
-    <input type="image" src="matrix.jpg" height="100px" width="100px" id="afbeelding" />
- 
 </body>
 </html>
