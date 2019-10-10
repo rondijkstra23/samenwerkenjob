@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
     <style>
+
+body{
+    background-color: greenyellow;
+    animation: blink 1s infinite;
+}
+
+        img,input{
+            border-radius: 50%;
+        }
+
         #knop {
             width: 50px;
             height: 50px;
@@ -26,19 +36,19 @@
     }
 
     @-webkit-keyframes myfirst {
-  0%   {background: red; left: 0px; top: 0px;}
-  25%  {background: yellow; left: 200px; top: 0px;}
-  50%  {background: blue; left: 200px; top: 200px;}
-  75%  {background: green; left: 0px; top: 200px;}
-  100% {background: red; left: 0px; top: 0px;}
+  0%   {left: 0px; top: 0px;}
+  25%  {left: 200px; top: 0px;}
+  50%  {left: 200px; top: 200px;}
+  75%  {left: 0px; top: 200px;}
+  100% {left: 0px; top: 0px;}
 }
 
 @keyframes myfirst {
-  0%   {background: red; left: 0px; top: 0px;}
-  25%  {background: yellow; left: 200px; top: 0px;}
-  50%  {background: blue; left: 200px; top: 200px;}
-  75%  {background: green; left: 0px; top: 200px;}
-  100% {background: red; left: 0px; top: 0px;}
+  0%   {left: 0px; top: 0px;}
+  25%  {left: 200px; top: 0px;}
+  50%  {left: 200px; top: 200px;}
+  75%  {left: 0px; top: 200px;}
+  100% {left: 0px; top: 0px;}
 }
 
 @-webkit-keyframes knopje {
@@ -93,7 +103,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>HALLO JOB</h1>
+    <marquee behavior="scroll" direction="right" scrollamount="50"><h1>HALLO JOB</h1></marquee>
+    <marquee behavior="scroll" direction="up" direction="right"><h1>HALLO RON</h1></marquee>
+
     <button type="button" onclick="alarm()">Hoi Ron</button>  
     <button>Job klik hier</button>
     <br>
@@ -103,9 +115,9 @@
     <br>
     
     <div class="bewegendplaatje">
-        <input type="image" src="matrix.jpg" height="100px" width="100px" id="afbeelding" />
+        <input type="image" src="oranjepaard.jpg" height="200px" width="200px" id="afbeelding" />
     </div>
-    <button id="knop" onclick="bericht()">klik hier</button>
+    <img src="matrix.jpg" id="knop" onclick="bericht()">
     
 
 </body>
